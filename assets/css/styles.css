@@ -8,8 +8,8 @@
   /*Purple 260 - Red 355 - Blue 224 - Pink 340*/
   /* HSL color mode */
   --hue-color: 224;
-  --first-color: hsl(var(--hue-color), 89%, 60%);
-  --second-color: hsl(var(--hue-color), 56%, 12%);
+  --first-color: hsl(var(--hue-color), 36%, 32%);
+  --second-color: hsl(var(--hue-color), 29%, 1%);
   /*===== Fuente y tipografia =====*/
   --body-font: "Poppins", sans-serif;
   --big-font-size: 2rem;
@@ -310,17 +310,33 @@ img {
 .work__container {
   row-gap: 2rem;
 }
-.work__img {
+..work__img {
   box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15);
   border-radius: 0.5rem;
   overflow: hidden;
+  position: relative;
 }
-.work__img img {
+
+.work__img img,
+.work__img iframe {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0.5rem;
   transition: 1s;
 }
-.work__img img:hover {
+
+.work__img img:hover,
+.work__img iframe:hover {
   transform: scale(1.1);
 }
+
+/* Ensure YouTube iframe aspect ratio */
+.work__img iframe {
+  aspect-ratio: 16 / 9;
+  height: auto;
+}
+
 
 /* ===== CONTACT =====*/
 .contact__input {
